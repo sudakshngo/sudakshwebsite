@@ -1,0 +1,16 @@
+
+.menu-bar span{color:#000;font-size:24px}
+.main-menubar{position:relative}
+
+nav{margin-right:70px;-webkit-transition:all 0.3s ease 0s;-moz-transition:all 0.3s ease 0s;-o-transition:all 0.3s ease 0s;transition:all 0.3s ease 0s;transform-origin:100% 50%}
+	@media (max-width: 767px)
+	{nav{margin-right:0;position:absolute;right:0;top:47px;text-align:right;padding:20px 0;z-index:5;background:#fff}
+	nav a{color:#f41665 !important}nav a:hover{color:#f41665}}
+
+nav.hide{transform:scale(0)}
+nav a{display:inline-block}
+	@media (max-width: 767px)
+	{nav a{margin:5px 25px}}nav a:hover{color:#f41665}
+.default-header{background-color:#fff;padding:20px 0;width:100% !important;}
+.header-text{text-align:center}
+
