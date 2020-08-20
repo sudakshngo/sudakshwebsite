@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-
+        
 
         .navbar.navbar-2 .navbar-toggler-icon {
         background-image: url('img/ham.png');
@@ -284,15 +284,24 @@
 
         .main-nav li {
             list-style: none;
-            margin: 0;
-            padding: 0;
+            margin: 10px;
+            padding: 15px 10px;
+            padding-bottom: 30px;
+            color: white;
+            
         }
-
+        .main-nav li a{
+            color: #e4f5f5;
+        }
+        
         .main-nav a {
-            display: block;
+            
             text-decoration: none;
             padding: 10px;
-            color: #000000;
+            color: white;
+        }
+        .main-nav .active{
+            color: rgb(250, 244, 244);
         }
 
         .logo {
@@ -379,7 +388,7 @@
 
 <body class="host_version">
     
-    <nav class="main-nav" style=" height:70px; background: #d94b38;">
+    <nav class="main-nav" style=" height:70px; background:#bd3b29f6; position:fixed; z-index: 1;">
         
 
 
@@ -394,44 +403,44 @@
 
             <div class="topmargin"></div>
             <div class="topmargin"></div>
-            <div class="toggle-nav"><i class="fa fa-bars" style="color:black"></i></div>
+            <div class="toggle-nav"><i class="fa fa-bars" style="color:rgb(14, 13, 13)"></i></div>
         </div>
         <ul>
-            <li class="customnav">
-              <br>  <a href="#">
-                    <font style="font-size:22px; color:#1c87c9; font-family:Helvetica; "><b> <pre> Home </pre></b></div>
+            <li class="customnav active">
+              <br>  <a class="active" href="/index.html">
+                    <font style="font-size:18px; color:#d3d1d1; font-family:Helvetica; "> Home </div>
                     </font>
                 </a>
             </li>
             <li class="customnav">
-               <br> <a href="#about">
-                    <font style="font-size:22px; color:#1c87c9; font-family:Helvetica; "><b> <pre> About Us </pre> </b></div>
+               <br> <a href="/about.html">
+                    <font style="font-size:18px; color:#1c87c9;font-weight: lighter; font-family:Helvetica; "><b>  About Us </b></div>
                     </font>
                 </a>
             </li>
             <li class="customnav">
-                <br><a href="#project">
-                    <font style="font-size:22px; color:#1c87c9; font-family:Helvetica; "><b> <pre> Impact </pre></b></div>
+                <br><a href="/project.html">
+                    <font style="font-size:18px; color:#e6e6e6;font-weight: lighter; font-family:Helvetica; "><b>  Impact </b></div>
                     </font>
                 </a>
             </li>
             <li class="customnav">
-                <br><a href="#testimonial">
-                    <font style="font-size:22px; color:#1c87c9; font-family:Helvetica; "><b> <pre> Interns </pre> </b></div>
+                <br><a href="/testimonials.html">
+                    <font style="font-size:18px; color:#1c87c9;font-weight: lighter; font-family:Helvetica; "><b>  Interns  </b></div>
                     </font>
                 </a>
             </li>
 			
 			<li class="customnav">
-                <br><a href="#joinUs">
-                    <font style="font-size:22px; color:#1c87c9; font-family:Helvetica; "><b> <pre> Join Us </pre> </b></div>
+                <br><a href="/join.html">
+                    <font style="font-size:18px; color:#1c87c9;font-weight: lighter; font-family:Helvetica; "><b>  Join Us  </b></div>
                     </font>
                 </a>
             </li>
 			
             <li class="customnav">
-                <br><a href="#donate">
-                    <font style="font-size:22px; color:#1c87c9; font-family:Helvetica; "><b> <pre> Donate </pre></b></div>
+                <br><a href="/donate.html">
+                    <font style="font-size:18px; color:#1c87c9;font-weight: lighter; font-family:Helvetica; "><b>  Donate </b></div>
                     </font>
                 </a>
             </li>
@@ -447,12 +456,12 @@
     
     <div class="navigation"> <br><br><br>
         <header class="default-header">
-            <div class="container" style="height: 80px">              
-                    <div class="header-top d-flex justify-content-between align-items-center">
-                        <div class="logotwo"> <img src="img/sudaksh-logo.png" style="margin-top: 10px"> </div>
-                        <div class="main-menubar d-flex align-items-center"  style="margin-top: 10px">
-                            <nav class="hide"> <a href="#">Home</a> <a onclick="about()">About</a> <a onclick="project()">Impact</a> <a onclick="testimonial()">Interns</a>  <a onclick="joinUs()">Join Us</a> <a onclick="donate()">Donate</a> </nav>
-                            <div class="menu-bar"><img src="img/ham.png"></span></div>
+            <div class="container" style="height: 70px; background-color: #bd3b29f6;">              
+                <div class="header-top d-flex justify-content-between align-items-center">
+                    <div class="logotwo"> <img src="img/sudaksh-logo.png" style="margin-top: 10px"> </div>
+                    <div class="main-menubar d-flex align-items-center"  style="margin-top: 10px">
+                        <nav class="hide"> <a href="/index.html">Home</a> <a href="/about.html">About</a> <a href="/project.html">Impact</a> <a href="/testimonials.html">Interns</a>  <a href="/join.html">Join Us</a> <a href="/donate.html">Donate</a> </nav>
+                        <div class="menu-bar"><img src="img/ham.png"></span></div>
                         </div>
                     </div>
                 </div>
@@ -467,7 +476,7 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner ">
+        <div class="carousel-inner1 ">
             <div class="carousel-item active"> <img class="d-block w-100" src="img/carousel/9.jpg" alt="First slide">
                 <div class="carousel-caption d-none d-md-block"> </div>
             </div>
@@ -515,7 +524,7 @@
             <div class="row text-center">
                 <div class="col-lg-6 col-md-6 project-wrap mb-4">
                     <div class="single-project">
-                        <div class="content">
+                        <div class="content"> 
                             <a target="_blank">
                                 <div class="content-overlay"></div><img class="content-image img-fluid d-block mx-auto" src="img/Img1-compressor.jpg" alt="">
                                 <div class="content-details fadeIn-bottom">
