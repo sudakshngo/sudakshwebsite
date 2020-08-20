@@ -43,7 +43,10 @@ body {
   line-height: 1.625em;
   position: relative;
 }
-
+.scial_icon ul li a{
+  color: rgb(245, 241, 241);
+  padding-top: 25px;
+}
 ol,
 ul {
   margin: 0;
@@ -775,7 +778,7 @@ sup,
 sub,
 u,
 del {
-  color: #fcd2ff
+  color: #ffffff
 }
 
 h1 {
@@ -1891,7 +1894,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9
+  z-index: 2
 }
 
 .menu-bar {
@@ -1908,7 +1911,7 @@ body {
 }
 
 nav {
-  margin-right: 70px;
+
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1918,33 +1921,32 @@ nav {
 
 @media (max-width: 767px) {
   nav {
-      margin-right: 0;
+
       position: absolute;
       right: 0;
       top: 47px;
       text-align: right;
-      padding: 20px 0;
-      z-index: 5;
-      background: #fff
+      
+      z-index: 1;
+      background:#bd3b29f6
   }
   nav a {
-      color: #1c87c9 !important
+      color: #f0f1f1 !important
   }
   nav a:hover {
-      color: #f41665
+      color: #000000
   }
 }
 
 nav.hide {
   transform: scale(0)
 }
-
-nav a {
-  color: #000;
+.nav a {
+  color: rgb(248, 245, 245);
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-  margin: 0 25px;
+  margin: 0 20px;
   display: inline-block
 }
 
@@ -1955,7 +1957,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #f41665
+  color: #000000
 }
 
 .section-gap {
@@ -1994,7 +1996,7 @@ nav a:hover {
 .single-project .content .content-overlay,
 .single-vol .content .content-overlay {
   background-image: -moz-linear-gradient(0deg, #f40f68 0%, #f86e3d 55%, #fbcd11 100%);
-  background-image: -webkit-linear-gradient(0deg, #f40f68 0%, #f86e3d 55%, #fbcd11 100%);
+  background-image: -webkit-linear-gradient(0deg, #424040 0%, #b95e5e 55%, #222222 100%);
   background-image: -ms-linear-gradient(0deg, #f40f68 0%, #f86e3d 55%, #fbcd11 100%)
 }
 
@@ -2085,13 +2087,13 @@ nav a:hover {
 
 .default-header {
   background-color: #fff;
-  padding: 20px 0;
+  padding: 0px 0;
   width: 100% !important;
   box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3)
 }
 
 .sticky-wrapper {
-  height: 48px !important
+  height: 0px !important
 }
 
 .banner-area {
@@ -2286,7 +2288,7 @@ nav a:hover {
 
 .single-project .content .content-overlay {
   position: absolute;
-  left: 0;
+  left: 5px ;
   top: 0;
   bottom: 0;
   right: 0;
@@ -2361,6 +2363,7 @@ nav a:hover {
 
 .about-area {
   background-color: #222
+
 }
 
 .about-right {
@@ -2473,6 +2476,11 @@ nav a:hover {
 .single-vol .content:hover .content-overlay {
   opacity: .8
 }
+@media screen (max-width:767px){
+  .myCarousel{
+    padding-top: 0px;
+  }
+}
 
 .single-vol .content-details {
   position: absolute;
@@ -2523,7 +2531,7 @@ nav a:hover {
 }
 
 .donate-area {
-  background: url(../img/donate.jpg) no-repeat center center fixed;
+  background: url(/img/20191220_170513.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2531,8 +2539,8 @@ nav a:hover {
 }
 
 .donate-area .overlay-bg {
-  opacity: .7;
-  background-color: #000
+  opacity: .89;
+  background-color: rgb(0, 0, 0.4)
 }
 
 .donate-area .header-text h1 {
@@ -2554,13 +2562,13 @@ nav a:hover {
   background-color: transparent;
   border: 1px solid #656463;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   padding: 12px
 }
 
 .donate-area .contact-right input,
 .donate-area .contact-right textarea {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 200
 }
 
@@ -2590,7 +2598,8 @@ nav a:hover {
 .footer-area {
   background-color: #fff;
   color: #222;
-  text-align: center
+  text-align: center;
+
 }
 
 .footer-menu {
@@ -2670,268 +2679,12 @@ body {
 
 /* testimonial slide - By Shubham Sharma - Do Not Remove*/
 
-.mycarousel {
-  position: relative
-}
 
-.mycarousel-inner {
-  position: relative;
-  width: 100%;
-  overflow: hidden
-}
-
-.mycarousel-item {
-  position: relative;
-  display: none;
-  align-items: center;
-  width: 100%;
-  transition: transform 0.4s ease;
-  backface-visibility: hidden;
-  perspective: 1000px
-}
-
-.mycarousel-item.active,
-.mycarousel-item-next,
-.mycarousel-item-prev {
-  display: block
-}
-
-.mycarousel-item-next,
-.mycarousel-item-prev {
-  position: absolute;
-  top: 0
-}
-
-.mycarousel-item-next.mycarousel-item-left,
-.mycarousel-item-prev.mycarousel-item-right {
-  transform: translateX(0)
-}
-
-@supports (transform-style: preserve-3d) {
-  .mycarousel-item-next.mycarousel-item-left,
-  .mycarousel-item-prev.mycarousel-item-right {
-      transform: translate3d(0, 0, 0)
-  }
-}
-
-.mycarousel-item-next,
-.active.mycarousel-item-right {
-  transform: translateX(100%)
-}
-
-@supports (transform-style: preserve-3d) {
-  .mycarousel-item-next,
-  .active.mycarousel-item-right {
-      transform: translate3d(100%, 0, 0)
-  }
-}
-
-.mycarousel-item-prev,
-.active.mycarousel-item-left {
-  transform: translateX(-100%)
-}
-
-@supports (transform-style: preserve-3d) {
-  .mycarousel-item-prev,
-  .active.mycarousel-item-left {
-      transform: translate3d(-100%, 0, 0)
-  }
-}
-
-.mycarousel-control-prev,
-.mycarousel-control-next {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 15%;
-  color: #fff;
-  text-align: center;
-  opacity: .5
-}
-
-.mycarousel-control-prev:focus,
-.mycarousel-control-prev:hover,
-.mycarousel-control-next:focus,
-.mycarousel-control-next:hover {
-  color: #fff;
-  text-decoration: none;
-  outline: 0;
-  opacity: .9
-}
-
-.mycarousel-control-prev {
-  left: 0
-}
-
-.mycarousel-control-next {
-  right: 0
-}
-
-.mycarousel-control-prev-icon,
-.mycarousel-control-next-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: transparent no-repeat center center;
-  background-size: 100% 100%
-}
-
-.mycarousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
-}
-
-.mycarousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
-}
-
-.mycarousel-indicators {
-  position: absolute;
-  right: 0;
-  bottom: 10px;
-  left: 0;
-  z-index: 15;
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-  margin-right: 15%;
-  margin-left: 15%;
-  list-style: none
-}
-
-.mycarousel-indicators li {
-  position: relative;
-  flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
-  margin-right: 3px;
-  margin-left: 3px;
-  text-indent: -999px;
-  background-color: rgba(255, 255, 255, 0.5)
-}
-
-.mycarousel-indicators li::before {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  display: inline-block;
-  width: 100%;
-  height: 10px;
-  content: ""
-}
-
-.mycarousel-indicators li::after {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  display: inline-block;
-  width: 100%;
-  height: 10px;
-  content: ""
-}
-
-.mycarousel-indicators .active {
-  background-color: #fff
-}
-
-.mycarousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center
-}
-
-@media (min-width: 768px) {
-  /* show 3 items */
-  .mycarousel-inner .active,
-  .mycarousel-inner .active+.mycarousel-item,
-  .mycarousel-inner .active+.mycarousel-item+.mycarousel-item {
-      display: block;
-  }
-  .mycarousel-inner .mycarousel-item.active:not(.mycarousel-item-right):not(.mycarousel-item-left),
-  .mycarousel-inner .mycarousel-item.active:not(.mycarousel-item-right):not(.mycarousel-item-left)+.mycarousel-item,
-  .mycarousel-inner .mycarousel-item.active:not(.mycarousel-item-right):not(.mycarousel-item-left)+.mycarousel-item+.mycarousel-item {
-      transition: none;
-  }
-  .mycarousel-inner .mycarousel-item-next,
-  .mycarousel-inner .mycarousel-item-prev {
-      position: relative;
-      transform: translate3d(0, 0, 0);
-  }
-  .mycarousel-inner .active.mycarousel-item+.mycarousel-item+.mycarousel-item+.mycarousel-item {
-      position: absolute;
-      top: 0;
-      right: -33.3333%;
-      z-index: -1;
-      display: block;
-      visibility: visible;
-  }
-  /* left or forward direction */
-  .active.mycarousel-item-left+.mycarousel-item-next.mycarousel-item-left,
-  .mycarousel-item-next.mycarousel-item-left+.mycarousel-item,
-  .mycarousel-item-next.mycarousel-item-left+.mycarousel-item+.mycarousel-item,
-  .mycarousel-item-next.mycarousel-item-left+.mycarousel-item+.mycarousel-item+.mycarousel-item {
-      position: relative;
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible;
-  }
-  /* farthest right hidden item must be abso position for animations */
-  .mycarousel-inner .mycarousel-item-prev.mycarousel-item-right {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      display: block;
-      visibility: visible;
-  }
-  /* right or prev direction */
-  .active.mycarousel-item-right+.mycarousel-item-prev.mycarousel-item-right,
-  .mycarousel-item-prev.mycarousel-item-right+.mycarousel-item,
-  .mycarousel-item-prev.mycarousel-item-right+.mycarousel-item+.mycarousel-item,
-  .mycarousel-item-prev.mycarousel-item-right+.mycarousel-item+.mycarousel-item+.mycarousel-item {
-      position: relative;
-      transform: translate3d(100%, 0, 0);
-      visibility: visible;
-      display: block;
-      visibility: visible;
-  }
-}
-
-/* - By Shubham Sharma - Do Not Remove - */
-
-.mycarousel-control-prev,
-.mycarousel-control-next {
-  height: fit-content;
-  width: fit-content;
-  top: auto;
-  padding: 10px;
-  border-radius: 50%;
-  position: relative;
-  display: inline;
-}
-
-.mycarouselControl {
-  width: fit-content;
-  width: -moz-fit-content;
-  margin: 0px auto;
-}
-
-.mycarousel-control-next-icon,
-.mycarousel-control-prev-icon {
-  filter: invert(1);
-}
 
 /*footer - By Shubham Sharma - Do Not Remove - */
 
 .footer-area {
-  background: #d94b38;
+  background: #bd3b29f6;
   color: white;
   padding-top: 30px;
 }
@@ -2945,7 +2698,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 15px;
-  background: #a53e30;
+  background: #423e3d;
   text-align: center;
   text-align: -moz-center;
 }
@@ -2992,10 +2745,10 @@ address {
 }
 
 .customnav :hover {
-  background-color: #d94b38;
+  font-weight: 700;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: rgb(19, 18, 18);
 }
 
 .intern-width{
